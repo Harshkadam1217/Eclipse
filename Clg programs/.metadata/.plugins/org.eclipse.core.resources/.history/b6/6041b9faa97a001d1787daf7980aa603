@@ -1,0 +1,33 @@
+class Main{
+	int total=3000;
+	int x;
+	int y;
+	public Main(int x,int y) {
+		this.x=x;
+		this.y=y;	
+	}
+	public void Add()
+	{
+		System.out.println(x+y);
+	}
+	public void Sub()
+	{
+		System.out.println(x-y);
+	}
+	public void Mul()
+	{
+		System.out.println(x*y);
+	}
+	public void Div()
+	{
+		System.out.println(x/y);
+		System.out.println(x%y);
+	}
+}
+public class Caluculator {
+	public static void main(String[] args) {
+		Main c=new Main(30,20);
+		c.Add();c.Sub();c.Mul();c.Div();
+		System.out.println("I love you"+c.total);
+	}
+}

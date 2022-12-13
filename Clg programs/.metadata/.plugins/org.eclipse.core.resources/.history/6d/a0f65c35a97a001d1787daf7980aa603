@@ -1,0 +1,36 @@
+class Main{
+	int total;
+	int x;
+	int y;
+	public Main(int x,int y) {
+		this.x=x;
+		this.y=y;
+		
+	}
+	public void Add()
+	{
+		System.out.println(x+y);
+	}
+	public void Sub()
+	{
+		System.out.println(x-y);
+	}
+	public void Mul()
+	{
+		System.out.println(x*y);
+	}
+	public void Div()
+	{
+		System.out.println(x/y);
+		System.out.println(x%y);
+	}
+}
+public class Caluculator {
+
+	public static void main(String[] args) {
+		Main c=new Main(10,20);
+		System.out.println(""+c.Add()+""+c.Sub()+""+c.Mul()+""+c.Div());
+		
+		
+	}
+}

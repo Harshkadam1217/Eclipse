@@ -1,0 +1,58 @@
+package com.dl.two;
+class Main{
+	int total;
+	int x;
+	int y;
+	public Main(int x,int y) {
+		this.x=x;
+		this.y=y;	
+	}
+	public void Add()
+	{
+		System.out.println("Sum "+(x+y));
+	}
+	public void Sub()
+	{
+		System.out.println("Sub "+(x-y));
+	}
+	public void Mul()
+	{
+		System.out.println("Mul "+(x*y));
+	}
+	public void Div()
+	{
+		System.out.println("Div "+(x/y));
+		System.out.println("Div1 "+(x%y));
+	}
+}
+class Caluculator extends Main{
+	int x;int y;
+	int total;
+	public Caluculator(int x, int y) 
+	{
+		super(x,y);
+	}
+	public void Power() {
+		total=0;
+		for(int i=1;i<=y;i++)
+		{
+			x+=(x*y);
+		}
+		total=x;
+		System.out.println("Power "+total);
+	}
+	public void percentage() {
+		total=(x/y)*100;
+		System.out.println("Percentage "+total);
+	}
+	
+}
+
+public class Advancecalculator {
+	public static void main(String[] args) {
+		Caluculator c=new Caluculator(30,20);
+		c.Add();c.Sub();c.Mul();c.Div();c.Power();c.percentage();
+		System.out.println(c.total);
+		
+	}
+}

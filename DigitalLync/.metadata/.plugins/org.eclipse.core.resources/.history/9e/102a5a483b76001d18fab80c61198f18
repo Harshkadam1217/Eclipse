@@ -1,0 +1,16 @@
+package com.dl.four;
+
+public abstract class Client {
+	
+	private static int a=10;
+	
+	private static void m1() {
+		System.out.println("Number is : "+ a);
+	}
+
+	public static void main(String[] args) {
+		System.out.println(a);
+		m1();
+	}
+
+}

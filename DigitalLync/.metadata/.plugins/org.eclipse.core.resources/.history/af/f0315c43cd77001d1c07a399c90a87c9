@@ -1,0 +1,32 @@
+package com.this1.keyword;
+
+class A{
+	B b;//data member
+	//constructor using field
+	public A(B b,String name){
+		this.b=b;
+	}
+	public void getDetails() {
+		System.out.println(b.b);
+		System.out.println(b.name);
+	}
+	
+}
+
+class B{
+	int b=1217;
+	String name="Harsh";
+	
+	public B() {
+		new A(this).getDetails();
+	}
+}
+
+public class Eg5 {
+
+	public static void main(String[] args) {
+		new B();
+
+	}
+
+}

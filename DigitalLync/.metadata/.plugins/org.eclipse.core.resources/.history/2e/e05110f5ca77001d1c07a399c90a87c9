@@ -1,0 +1,21 @@
+package com.this1.keyword;
+
+class Student{
+	public Student() {
+		this(10);
+		System.out.println("Default Constructor");
+	}
+	
+	public Student(int x)
+	{
+		System.out.println(x);
+	}
+}
+public class Eg3 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

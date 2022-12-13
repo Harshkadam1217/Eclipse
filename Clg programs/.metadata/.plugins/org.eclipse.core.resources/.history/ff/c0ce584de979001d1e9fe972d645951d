@@ -1,0 +1,139 @@
+import java.util.*;
+import java.lang.*;
+public class Binarytree 
+{
+	static int count;
+	Node root;
+	public static class Node
+	{
+		int data;
+		Node left;
+		Node right;
+		Node(int data)
+		{
+			this.data=data;
+			left=null;
+			right=null;
+
+		}
+	}
+	
+	
+
+	public static void print(Node node)//postorder
+	{
+		if(node!=null)
+		{
+			print(node.left);
+			print(node.right);
+			System.out.print(node.data+" ");
+		}
+		
+	}
+	
+	
+	public static Binarytree Insertnode(Binarytree b1,int data) throws Exception
+	{
+		Node new_node=new Node(data);
+		if(b1.root==null)
+		{
+			b1.root=new_node;
+			
+			
+		}
+		else
+		{
+			Node currnode=b1.root;
+			if(new_node.data<b1.root.data) 
+			{
+				while(true)
+				{
+					if(new_node.data<currnode.data && currnode.left!=null)
+					{
+						currnode=currnode.left;
+					
+					else if(new_node.data<currnode.data && currnode.left==null)
+					{
+						currnode.left=new_node;
+						currnode=currnode.left;
+						break;
+					}
+					else if(new_node.data>currnode.data && currnode.right!=null)
+					{
+						currnode=currnode.left;
+					}
+					else if(new_node.data>currnode.data && currnode.right==null)
+					{
+						currnode.right=new_node;
+						currnode=currnode.right;
+						
+						break;
+						
+					}
+				}
+				return b1;
+			}
+			else if(new_node.data>b1.root.data) 
+			{
+				while(true)
+				{
+					if(new_node.data<currnode.data && currnode.left!=null)
+					{
+						currnode=currnode.left;
+					}
+					if(new_node.data<currnode.data && currnode.left==null)
+					{
+						currnode.left=new_node;
+						currnode=currnode.left;
+						
+						break;
+					}
+					else if(new_node.data>currnode.data && currnode.right!=null)
+					{
+						currnode=currnode.left;
+					}
+					else if(new_node.data>currnode.data && currnode.right==null)
+					{
+						currnode.right=new_node;
+						currnode=currnode.right;
+						break;
+					}
+				}
+			}
+			return b1;
+		}
+		return b1;
+	}
+	public static void print(Binarytree b1)
+	{
+	
+	}
+	public static void main(String[] args) throws Exception
+	{
+		Binarytree b1=new Binarytree();
+		b1=Insertnode(b1,90);
+//	    b1=Insertnode(b1,85);
+//	    b1=Insertnode(b1,35);
+//	    b1=Insertnode(b1,140);
+//	    b1=Insertnode(b1,99);
+//	    b1=Insertnode(b1,11);
+//	    b1=Insertnode(b1,26);
+//	    b1=Insertnode(b1,35);
+	    b1=Insertnode(b1,118);
+	    b1=Insertnode(b1,40);
+	    b1=Insertnode(b1,60);
+	    b1=Insertnode(b1,58);
+	    b1=Insertnode(b1,56);
+	    b1=Insertnode(b1,83);
+		b1=Insertnode(b1,5);
+		b1=Insertnode(b1,3);
+		b1=Insertnode(b1,2);
+		b1=Insertnode(b1,6);
+		b1=Insertnode(b1,4);
+		b1=Insertnode(b1,7);
+		Node prevnode=b1.root;
+		print(prevnode);
+		
+		
+	}
+}

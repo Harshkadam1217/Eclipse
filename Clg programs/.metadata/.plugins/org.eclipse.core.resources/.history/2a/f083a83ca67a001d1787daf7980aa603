@@ -1,0 +1,32 @@
+class Main{
+	int total;
+	public void Add(int x,int y)
+	{
+		total=x+y;
+		System.out.println("Sum = "+total);
+	}
+	public void Sub(int x,int y)
+	{
+		total=x-y;
+		System.out.println("Sub = "+total);
+	}
+	public void Mul(int x,int y)
+	{
+		total=x*y;
+		System.out.println("Mul = "+total);
+	}
+	public void Div(int x,int y)
+	{
+		total=x/y;
+		System.out.println("Div = "+total);
+	}
+}
+public class Caluculator {
+
+	public static void main(String[] args) {
+		new Main().Add(10, 20);
+		new Main().Sub(10, 20);
+		new Main().Mul(10, 20);
+		new Main().Div(10, 20);
+	}
+}

@@ -1,0 +1,24 @@
+package com.dl.one;
+class A{
+	int i=10;
+	int j=20;
+	
+	
+}
+
+class B extends A{
+	int i=100;
+	int j=200;
+	public B(int i,int j) {
+		System.out.println("Argument passed values "+i+" "+j);
+		System.out.println("Instance variavles from current class "+this.i+" "+this.j);
+		System.out.println("Instance variable from class "+super.i+" "+super.j);
+	}
+}
+public class Eg1 {
+
+	public static void main(String[] args) {
+		new B(1000,2000);
+	}
+
+}

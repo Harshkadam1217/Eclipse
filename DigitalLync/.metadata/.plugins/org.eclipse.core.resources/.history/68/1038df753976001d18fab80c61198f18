@@ -1,0 +1,44 @@
+package com.dl.three;
+
+
+abstract class A{
+	public abstract void m1();
+	public abstract void m2();
+	public abstract void m3();
+	public abstract void m4();
+	public abstract void m5();
+}
+
+abstract class B extends A{
+	public void m1() {
+		System.out.println("M1 method is called");
+	}
+	public void m2() {
+		System.out.println("M2 method is called");
+	}
+}
+
+
+abstract class C extends B{
+	public void m3() {
+		System.out.println("M3 is method is called");
+	}
+	public void m4() {
+		System.out.println("M4 method is called");
+	}
+	public void m5() {
+		System.out.println("M5 method is called");
+	}
+}
+public class Client extends C{
+	public static void main(String[] args) {
+		new Client().m1();
+		new Client().m2();
+		new Client().m3();
+		new Client().m4();
+		new Client().m5();
+		
+
+	}
+
+}

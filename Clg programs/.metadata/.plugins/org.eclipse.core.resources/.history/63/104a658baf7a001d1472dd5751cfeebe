@@ -1,0 +1,44 @@
+package com.dl.two;
+class Main{
+	String total="Lanja  laku  Lanjey";
+	int x;
+	int y;
+	public Main(int x,int y) {
+		this.x=x;
+		this.y=y;	
+	}
+	public void Add()
+	{
+		System.out.println(x+y);
+	}
+	public void Sub()
+	{
+		System.out.println(x-y);
+	}
+	public void Mul()
+	{
+		System.out.println(x*y);
+	}
+	public void Div()
+	{
+		System.out.println(x/y);
+		System.out.println(x%y);
+	}
+}
+class Caluculator extends Main{
+
+	public Caluculator(int x, int y) {
+		super(x, y);
+		
+	}
+	
+}
+
+public class Advancecalculator {
+	public static void main(String[] args) {
+		Main c=new Main(30,20);
+		String a="J.C";
+		c.Add();c.Sub();c.Mul();c.Div();
+		System.out.println(a+" nuvu  "+c.total);
+	}
+}

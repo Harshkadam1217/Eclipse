@@ -1,0 +1,26 @@
+package com.dl.one;
+class C{
+	public void m1() {
+		
+		System.out.println("M1 method.P");
+	}
+}
+
+class D extends C
+{
+	public void m1() {
+		System.out.println("M1 method.c");
+		this.m2();
+	}
+	public void m2() {
+		this.m1();
+		super.m1();
+		System.out.println("M2 method.cp");
+	}
+}
+public class Eg2 {
+	public static void main(String[] args) {
+		D d=new D();
+		d.m2();
+	}
+}

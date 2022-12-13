@@ -1,0 +1,23 @@
+package com.polymorphism.one;
+
+public class Eg1 {
+
+	public static void main(String[] args) 
+	{
+		new Eg1().getPetrolCost(10,20);
+		new Eg1().getDiselCost(10f,20f);
+
+	}
+	
+	public void getPetrolCost(int petrol,int disel)
+	{
+		System.out.println("Petrol Cost " + petrol);
+		System.out.println("Disel cost "+ disel);
+	}
+	public void getDiselCost(float petrol,float disel)
+	{
+		System.out.println("Petrol Cost " + petrol);
+		System.out.println("Disel cost "+ disel);
+	}
+
+}

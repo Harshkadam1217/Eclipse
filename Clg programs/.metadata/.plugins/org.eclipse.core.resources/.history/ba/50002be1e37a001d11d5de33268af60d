@@ -1,0 +1,27 @@
+public class Recurssion 
+{
+	public void rev(int b,int c,int j)
+	{
+		if(j>=0)
+		{
+			System.out.print(x[j]);
+			j--;
+		}
+	}
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		Recurssion r=new Recurssion();
+		int a=sc.nextInt();
+		int b[]=new int[a];
+		int c[]=new int[a];
+		
+		for(int i=0;i<a;i++)
+		{
+			b[i]=sc.nextInt();
+		}
+		int j=b.length()-1;
+		r.rev(b,c,j);
+	}
+
+}

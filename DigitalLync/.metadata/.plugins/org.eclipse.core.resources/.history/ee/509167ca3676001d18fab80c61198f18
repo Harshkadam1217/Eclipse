@@ -1,0 +1,8 @@
+package com.dl.one;
+
+public class Clientone {
+	public static void main(String[] args) {
+		new Clientone();
+	}
+
+}
